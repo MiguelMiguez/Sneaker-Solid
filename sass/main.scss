@@ -270,6 +270,43 @@ nav a{
 
 /* Contact */
 
+.div-about{
+    width: 100%;
+    height: auto;
+    .img-about{ 
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about-us{
+    text-align: center;
+    .p-1{
+        margin: 2rem 1rem 2rem 1rem;
+    }
+    .img-about{ 
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.iframe-map{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    
+    iframe{
+        width: 400px;
+        border: solid black 4px;
+        border-radius: 2px;
+    }
+}
+
+
 .container-form {
     margin: 2rem 1rem 2rem 1rem;
     display: grid;
