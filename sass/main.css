@@ -219,7 +219,18 @@ nav a {
 .catalogo .cat-sneakers .precio {
   font-weight: 500;
   color: rgb(170, 49, 5);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* shoes */
+.btn-group {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  gap: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 /* Accesorios */
