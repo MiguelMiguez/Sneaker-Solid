@@ -186,7 +186,9 @@ nav a{
         background-color: $colorcat ;
         border-radius: 5px;
         padding:0.1rem 0.1rem ;
+        box-shadow: 2px 2px 4px 0px rgba(66, 66, 66, 0.767);
         img{
+            border-radius: 5px;
             width: 200px;
             height: 200px;
             
