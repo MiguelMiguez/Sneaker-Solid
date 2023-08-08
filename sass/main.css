@@ -223,14 +223,42 @@ nav a {
 }
 
 /* shoes */
-.btn-group {
+.model-shoes {
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.model-shoes .model-sneaker {
+  font-size: 2rem;
+}
+.model-shoes .genre {
+  font-weight: 500;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+}
+.model-shoes .price {
+  font-weight: 600;
+  color: rgb(170, 49, 5);
+}
+
+.talle-buttons {
+  display: grid;
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  gap: 1rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.1rem;
+}
+.talle-buttons .talle-button {
+  padding: 8px 16px;
+  margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+  background-color: #030303;
+  color: wheat;
+  border: solid white 0.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.talle-buttons .talle-button:hover {
+  background-color: #e0e0e0;
+  color: black;
+  border: solid black 0.5px;
 }
 
 /* Accesorios */
@@ -294,19 +322,22 @@ nav a {
   display: grid;
   justify-items: center;
   align-items: center;
-  max-width: 400px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 2rem 1rem 2rem 1rem;
 }
-.container-form h1 {
+.container-form h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
+  font-size: x-large;
 }
 .container-form .form-group {
   margin-bottom: 20px;
+}
+.container-form .form-group #message {
+  width: 100%;
 }
 .container-form .form-group label {
   display: block;
@@ -327,4 +358,224 @@ nav a {
 }
 .container-form .form-group button:hover {
   background-color: #444;
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  /* index */
+  .port-sneakers {
+    background-image: url(../img/portada2-lilnass.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5rem 0rem 5rem 0rem;
+    background-size: cover;
+  }
+  .port-sneakers h1 {
+    text-align: start;
+    font-size: 5rem;
+    color: beige;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .global-sneakers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* sneakers y accesorios*/
+  .catalogo {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* About us */
+  .div-about h1 {
+    font-size: 3rem;
+  }
+  .about-us .p-1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .iframe-map iframe {
+    width: 600px;
+    height: 200px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .port-sneakers {
+    background-size: cover;
+  }
+  .global-sneakers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* sneakers y accesorios*/
+  .catalogo {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  /* About us */
+  .div-about h1 {
+    font-size: 3rem;
+  }
+  .about-us .p-1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .iframe-map iframe {
+    width: 600px;
+    height: 200px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .port-sneakers {
+    background-size: cover;
+  }
+  .global-sneakers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .global-sneakers .sneakers-dest {
+    width: 300px;
+    height: auto;
+  }
+  .global-sneakers .sneakers-dest img {
+    width: 300px;
+    height: auto;
+  }
+  .global-sneakers .sneakers-dest p {
+    font-size: large;
+  }
+  .global-sneakers #sneakers-no-show {
+    display: none;
+  }
+  /* sneakers y accesorios*/
+  .port-accesorios {
+    background-size: cover;
+  }
+  .catalogo {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .catalogo .cat-sneakers {
+    background-color: rgb(30, 28, 32);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  .catalogo .cat-sneakers .img-snakers-cat {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    border: solid rgb(42, 38, 46) 2px;
+  }
+  .catalogo .cat-sneakers p {
+    text-align: start;
+    padding-top: 0.5rem;
+    font-weight: 600;
+  }
+  .catalogo .cat-sneakers .genero {
+    text-align: start;
+    padding-top: 0.5rem;
+    font-weight: 200;
+    color: white;
+  }
+  .catalogo .cat-sneakers .precio {
+    font-weight: 500;
+    color: rgb(170, 49, 5);
+    margin-bottom: 1.5rem;
+  }
+  /* Shoes */
+  .full-shoes {
+    display: grid;
+    grid-template-areas: "carouselExampleDark full-view";
+  }
+  .full-shoes #carouselExampleDark {
+    padding: 0.4rem 0.2rem 0.4rem 0.2rem;
+    width: 100%;
+  }
+  .full-shoes .full-view .model-shoes .model-sneaker {
+    font-size: 3.5rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .full-shoes .full-view .model-shoes .genre {
+    font-size: 2rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .full-shoes .full-view .model-shoes .price {
+    font-size: 1.7rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+  }
+  /* About US */
+  .div-about h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1201px) {
+  .port-sneakers {
+    background-size: cover;
+  }
+  .global-sneakers {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .global-sneakers .sneakers-dest {
+    width: 300px;
+    height: auto;
+  }
+  .global-sneakers .sneakers-dest img {
+    width: 300px;
+    height: auto;
+  }
+  .global-sneakers .sneakers-dest p {
+    font-size: large;
+  }
+  .global-sneakers #sneakers-no-show {
+    display: none;
+  }
+  /* sneakers y accesorios*/
+  .port-accesorios {
+    background-size: cover;
+  }
+  .catalogo {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .catalogo .cat-sneakers {
+    background-color: rgb(30, 28, 32);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  .catalogo .cat-sneakers .img-snakers-cat {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    border: solid rgb(42, 38, 46) 2px;
+  }
+  .catalogo .cat-sneakers p {
+    text-align: start;
+    padding-top: 0.5rem;
+    font-weight: 600;
+  }
+  .catalogo .cat-sneakers .genero {
+    text-align: start;
+    padding-top: 0.5rem;
+    font-weight: 200;
+    color: white;
+  }
+  .catalogo .cat-sneakers .precio {
+    font-weight: 500;
+    color: rgb(170, 49, 5);
+    margin-bottom: 1.5rem;
+  }
+  /* Shoes */
+  .full-shoes {
+    display: grid;
+    grid-template-areas: "carouselExampleDark full-view";
+  }
+  .full-shoes #carouselExampleDark {
+    padding: 0.4rem 0.2rem 0.4rem 0.2rem;
+    width: 100%;
+  }
+  .full-shoes .full-view .model-shoes .model-sneaker {
+    font-size: 3.5rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .full-shoes .full-view .model-shoes .genre {
+    font-size: 2rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .full-shoes .full-view .model-shoes .price {
+    font-size: 1.7rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

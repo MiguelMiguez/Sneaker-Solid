@@ -49,8 +49,8 @@ $colorcat:  rgb(42, 38, 46);
 $fontcolor: rgb(204, 192, 192);
 $ffamili: 'Montserrat', sans-serif;
 $fmobile: 2rem;
-$ftablet: 5rem;
-$fpc: 5rem;
+$ftablet: 3rem;
+$fpc: 4rem;
 
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Montserrat:wght@100;300;400;500&display=swap');
 
@@ -264,16 +264,54 @@ nav a{
 
 /* shoes */
 
-.btn-group{
+.model-shoes{
+    
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    .model-sneaker{
+        font-size: $fmobile;
+    }
+
+    .genre{
+        font-weight: 500;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+    }
+
+    .price{
+        font-weight: 600;
+        color: rgb(170, 49, 5);
+    }
+
+}
+
+.talle-buttons {
+    display: grid;
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    gap: 1rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-   
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 0.1rem;
+
+
+    .talle-button {
+        padding: 8px 16px;
+        margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+        background-color: #030303;
+        color: wheat;
+        border: solid white 0.5px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+      
+      .talle-button:hover {
+        background-color: #e0e0e0;
+        color: black;
+        border: solid black 0.5px;
+    }
 }
+  
+
+  
+  
 
 /* Accesorios */
 
@@ -348,20 +386,25 @@ nav a{
     display: grid;
     justify-items: center;
     align-items: center;
-    max-width: 400px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 2rem 1rem 2rem 1rem;
     
 
-    h1 {
+    h2 {
         text-align: center;
         margin-bottom: 20px;
         color: #333;
+        font-size: x-large;
     }
     .form-group {
         margin-bottom: 20px;
+
+        #message{
+            width: 100%;
+        }
+
         label {
             display: block;
             font-weight: bold;
@@ -385,4 +428,328 @@ nav a{
             background-color: #444;
         }
     }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    /* index */
+
+    .port-sneakers{
+        background-image: url(../img/portada2-lilnass.webp) ;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding: 5rem 0rem 5rem 0rem;
+        background-size: cover;
+        
+        h1{text-align: start;
+        font-size: 5rem;
+        color: beige;
+        font-family: $ffamili;
+        margin-left: 10px;
+        font-weight: 600;
+        }
+    }
+
+    .global-sneakers{
+       
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    }
+
+    /* sneakers y accesorios*/
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* About us */
+
+    .div-about{
+        h1{
+            font-size: $ftablet;
+        }
+    }
+    .about-us{
+        .p-1{
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .iframe-map{
+        iframe{
+            width: 600px;
+            height: 200px;
+        }
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .port-sneakers{
+        background-size: cover;
+    }
+    
+    .global-sneakers{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    /* sneakers y accesorios*/
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* About us */
+
+    .div-about{
+        h1{
+            font-size: $ftablet;
+        }
+    }
+    .about-us{
+        .p-1{
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .iframe-map{
+        iframe{
+            width: 600px;
+            height: 200px;
+        }
+    }
+
+}
+
+@media (min-width: 993px) and (max-width: 1200px){
+
+    .port-sneakers{
+        background-size: cover;
+    }
+    
+    .global-sneakers{
+
+        .sneakers-dest{
+            width: 300px;
+            height: auto;
+            img{width: 300px;
+                height: auto;
+            }
+            p{
+                font-size: large ;
+            }
+        }    
+
+        grid-template-columns: 1fr 1fr 1fr ;
+
+        #sneakers-no-show{
+            display: none;
+        }
+    
+    }
+
+    /* sneakers y accesorios*/
+
+    .port-accesorios{
+        background-size: cover;
+    }
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .cat-sneakers{
+
+            background-color: $bodycolor;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            
+            
+            .img-snakers-cat{
+                width: 300px;
+                height: 300px;
+                border-radius: 5px;
+                border: solid $colorcat 2px;
+            }
+    
+            p{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 600;
+            }
+    
+            .genero{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 200;
+                color: white;
+            }
+    
+            .precio{
+                font-weight: 500;
+                color: rgb(170, 49, 5);
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    }
+
+    
+
+    /* Shoes */
+
+    .full-shoes{
+        display: grid;
+        grid-template-areas: 
+        "carouselExampleDark full-view";
+
+
+    #carouselExampleDark{
+        padding: 0.4rem 0.2rem 0.4rem 0.2rem;
+        width: 100%;
+    }
+
+    .full-view{
+        .model-shoes{
+            .model-sneaker{
+                font-size: 3.5rem;
+                margin: 1rem 0.5rem 1rem 0.5rem;
+            }
+            .genre{
+                font-size: 2rem;
+                margin: 1rem 0.5rem 1rem 0.5rem;
+            }
+            .price{ 
+                font-size: 1.7rem;
+                margin: 1rem 0.5rem 1rem 0.5rem;
+             }
+        }
+    }
+
+    }
+
+    /* About US */
+
+    .div-about{
+        h1{
+          font-size: $fpc;  
+        }
+    }
+
+    .about-us{
+        
+    }
+
+}
+
+
+@media (min-width: 1201px) {
+
+    .port-sneakers{
+        background-size: cover;
+    }
+    
+    .global-sneakers{
+
+        .sneakers-dest{
+            width: 300px;
+            height: auto;
+            img{width: 300px;
+                height: auto;
+            }
+            p{
+                font-size: large ;
+            }
+        }    
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        #sneakers-no-show{
+            display: none;
+        }
+    
+    }
+
+    /* sneakers y accesorios*/
+
+    .port-accesorios{
+        background-size: cover;
+    }
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .cat-sneakers{
+
+            background-color: $bodycolor;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            
+            
+            .img-snakers-cat{
+                width: 300px;
+                height: 300px;
+                border-radius: 5px;
+                border: solid $colorcat 2px;
+            }
+    
+            p{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 600;
+            }
+    
+            .genero{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 200;
+                color: white;
+            }
+    
+            .precio{
+                font-weight: 500;
+                color: rgb(170, 49, 5);
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    }
+
+    
+
+    /* Shoes */
+
+    .full-shoes{
+        display: grid;
+        grid-template-areas: 
+        "carouselExampleDark full-view";
+
+
+    #carouselExampleDark{
+        padding: 0.4rem 0.2rem 0.4rem 0.2rem;
+        width: 100%;
+    }
+
+    .full-view{
+        .model-shoes{
+            .model-sneaker{
+                font-size: 3.5rem;
+                margin: 1rem 0.5rem 1rem 0.5rem;
+            }
+            .genre{
+                font-size: 2rem;
+                margin: 1rem 0.5rem 1rem 0.5rem;
+            }
+            .price{ 
+                font-size: 1.7rem;
+                margin: 1rem 0.5rem 1rem 0.5rem;
+             }
+        }
+    }
+
+    }
+        
 }
