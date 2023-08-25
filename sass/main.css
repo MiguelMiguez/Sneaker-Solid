@@ -130,7 +130,8 @@ nav a {
   background-image: url(../img/portada2-lilnass.webp);
   background-repeat: no-repeat;
   width: 100%;
-  padding: 5rem 0rem 5rem 0rem;
+  padding: 10rem 0rem 10rem 0rem;
+  background-size: cover;
 }
 .port-sneakers h1 {
   text-align: start;
@@ -297,10 +298,27 @@ nav a {
 }
 .about-us .p-1 {
   margin: 2rem 1rem 2rem 1rem;
+  text-align: center;
 }
 .about-us .div-about2 .img-about {
   width: 100%;
   height: auto;
+}
+
+.about-us-2 {
+  text-align: center;
+}
+.about-us-2 .p-1 {
+  margin: 2rem 1rem 2rem 1rem;
+}
+.about-us-2 .div-about2 .img-about {
+  width: 100%;
+  height: auto;
+}
+
+.p-1 {
+  text-align: center;
+  margin: 2rem 1rem 2rem 1rem;
 }
 
 .iframe-map {
@@ -392,6 +410,14 @@ nav a {
     font-size: 1.5rem;
     font-weight: 500;
   }
+  .about-us-2 .p-1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .p-1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
   .iframe-map iframe {
     width: 600px;
     height: 200px;
@@ -413,6 +439,10 @@ nav a {
     font-size: 3rem;
   }
   .about-us .p-1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .about-us-2 .p-1 {
     font-size: 1.5rem;
     font-weight: 500;
   }
@@ -501,6 +531,59 @@ nav a {
   .div-about h1 {
     font-size: 4rem;
   }
+  .about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us .p-1 {
+    font-size: large;
+    width: 50%;
+    height: auto;
+  }
+  .about-us .div-about2 {
+    width: 50%;
+    height: auto;
+  }
+  .about-us .div-about2 .img-about {
+    width: 100%;
+    height: auto;
+  }
+  .about-us-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us-2 .p-1 {
+    font-size: large;
+    width: 50%;
+    height: auto;
+  }
+  .about-us-2 .div-about2 {
+    width: 50%;
+    height: auto;
+  }
+  .about-us-2 .div-about2 .img-about {
+    width: 100%;
+    height: auto;
+  }
+  .familia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .familia .p-1 {
+    font-size: x-large;
+  }
+  .iframe-map {
+    width: 100%;
+    height: auto;
+  }
+  .iframe-map iframe {
+    width: 900px;
+    height: 300px;
+  }
 }
 @media (min-width: 1201px) {
   .port-sneakers {
@@ -577,5 +660,63 @@ nav a {
   .full-shoes .full-view .model-shoes .price {
     font-size: 1.7rem;
     margin: 1rem 0.5rem 1rem 0.5rem;
+  }
+  /* about-us */
+  .div-about h1 {
+    font-size: 4rem;
+  }
+  .about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us .p-1 {
+    font-size: 2rem;
+    width: 50%;
+    height: auto;
+  }
+  .about-us .div-about2 {
+    width: 50%;
+    height: auto;
+  }
+  .about-us .div-about2 .img-about {
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0.5rem;
+  }
+  .about-us-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us-2 .p-1 {
+    font-size: 2rem;
+    width: 50%;
+    height: auto;
+  }
+  .about-us-2 .div-about2 {
+    width: 50%;
+    height: auto;
+  }
+  .about-us-2 .div-about2 .img-about {
+    width: 100%;
+    height: auto;
+  }
+  .familia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .familia .p-1 {
+    font-size: 3rem;
+  }
+  .iframe-map {
+    width: 100%;
+    height: auto;
+  }
+  .iframe-map iframe {
+    width: 900px;
+    height: 300px;
   }
 }/*# sourceMappingURL=main.css.map */

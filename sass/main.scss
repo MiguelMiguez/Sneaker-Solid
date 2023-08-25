@@ -95,6 +95,7 @@ nav a{
     color: #ffffff;
     text-align: center;
 
+
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -157,7 +158,8 @@ nav a{
     background-image: url(../img/portada2-lilnass.webp) ;
     background-repeat: no-repeat;
     width: 100%;
-    padding: 5rem 0rem 5rem 0rem;
+    padding: 10rem 0rem 10rem 0rem;
+    background-size: cover;
     h1{text-align: start;
     font-size: 5rem;
     color: beige;
@@ -353,6 +355,7 @@ nav a{
     text-align: center;
     .p-1{
         margin: 2rem 1rem 2rem 1rem;
+        text-align: center;
     }
     
     .div-about2{
@@ -362,6 +365,26 @@ nav a{
             height: auto;
         }
     }
+}
+
+.about-us-2{
+    text-align: center;
+    .p-1{
+        margin: 2rem 1rem 2rem 1rem;
+    }
+    
+    .div-about2{
+        
+         .img-about{ 
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.p-1{
+    text-align: center;
+    margin: 2rem 1rem 2rem 1rem;
 }
 
 
@@ -475,6 +498,19 @@ nav a{
             font-weight: 500;
         }
     }
+    .about-us-2{
+
+        .p-1{
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+    }
+
+    .p-1{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
 
     .iframe-map{
         iframe{
@@ -514,6 +550,15 @@ nav a{
             font-size: 1.5rem;
             font-weight: 500;
         }
+    }
+
+    .about-us-2{
+
+        .p-1{
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
     }
 
     .iframe-map{
@@ -640,9 +685,65 @@ nav a{
     }
 
     .about-us{
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
         
+
+        .p-1{
+            
+            font-size: large;
+            width: 50%;
+            height: auto;   
+        }
+        .div-about2{
+            width: 50%;
+            height: auto;
+            .img-about{
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 
+    .about-us-2{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        .p-1{
+            
+            font-size: large;
+            width: 50%;
+            height: auto;   
+        }
+        .div-about2{
+            width: 50%;
+            height: auto;
+            .img-about{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+    .familia{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .p-1{
+            font-size: x-large;
+        }
+    }
+    .iframe-map{
+        width: 100%;
+        height: auto;
+        iframe{
+            width: 900px;
+            height: 300px;
+        }
+    }
 }
 
 
@@ -750,6 +851,77 @@ nav a{
         }
     }
 
+    }
+
+    /* about-us */
+
+    .div-about{
+        h1{
+            font-size: $fpc;
+        }
+    }
+
+    
+    .about-us{
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        .p-1{
+            
+            font-size: 2rem;
+            width: 50%;
+            height: auto;   
+        }
+        .div-about2{
+            width: 50%;
+            height: auto;
+            .img-about{
+                width: 100%;
+                height: auto;
+                margin: 0.5rem 0.5rem;
+            }
+        }
+    }
+
+    .about-us-2{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        .p-1{
+            
+            font-size: 2rem;
+            width: 50%;
+            height: auto;   
+        }
+        .div-about2{
+            width: 50%;
+            height: auto;
+            .img-about{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+    .familia{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .p-1{
+            font-size: 3rem;
+        }
+    }
+    .iframe-map{
+        width: 100%;
+        height: auto;
+        iframe{
+            width: 900px;
+            height: 300px;
+        }
     }
         
 }
