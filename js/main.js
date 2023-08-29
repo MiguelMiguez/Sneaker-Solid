@@ -1,32 +1,7 @@
+
+/* -------------------------------------- */
+
 /* Simulador */
-
-
-
-/* const saldo = 0;
-
-if( saldo <= zapatillasDestacadas){
-    console.log ("puede pagar")
-}else{
-    console.log ("no puede pagar")
-}
-     */
-
-/* -------------------------------------- */
-/* 
-const saldoefectivo = 10000
-const saldocredito = 90000
-
-if( zapatillasDestacadas + zapatillasDestacadas2 <= saldoefectivo ){
-    console.log ("no puede pagar")
-}else if (saldoefectivo + saldocredito >= zapatillasDestacadas ){
-    console.log ("puede pagar")
-} if ("puede pagar"){
-    console.log ("felicitaciones por la compra")
-} */
-   
-
-
-/* -------------------------------------- */
 
 let zapatillasDestacadas = 80000;
 let zapatillasDestacadas2 = 80000;
@@ -50,7 +25,42 @@ if (puedepagar === true) {
     console.log("Por favor carga el saldo nuevamente");
 }
 
+/* ------------------------------------ */
+
+function zapatillas(m,p,t){
+    this.marca = m;
+    this.precio = p;
+    this.talle = t;
+}
+
+let zapatilla1 = new zapatillas("nike","23210","37")
+let zapatilla2 = new zapatillas("adidas","20780","32")
+let zapatilla3 = new zapatillas("topper","23230","35")
+let zapatilla4 = new zapatillas("puma","20254","40")
+
+console.log (zapatilla1)
+console.log (zapatilla2)
+console.log (zapatilla3)
+console.log (zapatilla4)
 /* -------------------------------------- */
 
+const cantidad = Number(prompt("Ingresa cantidad que deseas comprar"));
+const stock = 100;
 
+function resultado(cantidad, stock) {
+    if (cantidad <= stock) {
+        console.log("Tenemos stock disponible");
+        return true;
+    } else {
+        console.log("No tenemos suficiente stock disponible");
+        return false;
+    }
+}
 
+let contamosConStock = resultado(cantidad, stock);
+
+if (contamosConStock) {
+    console.log("Contamos con stock");
+} else {
+    console.log("No contamos con stock");
+}
