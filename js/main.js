@@ -20,7 +20,7 @@ if (saldo >= zapatillasDestacadas) {
 }
 
 if (puedepagar === true) {
-    console.log("Felicitaciones por la compra");
+    console.log("Felicitaciones tenes saldo suficiente");
 } else {
     console.log("Por favor carga el saldo nuevamente");
 }
@@ -63,4 +63,13 @@ if (contamosConStock) {
     console.log("Contamos con stock");
 } else {
     console.log("No contamos con stock");
+}
+/* -------------------------------------- */
+
+for(let i=1 ; i<=5 ; i+=1 ){
+    if(i===5){
+        console.log("No podes compar más de 5 pares")
+        break;
+    }
+    console.log ("Compraste estos pares: " + i);
 }
