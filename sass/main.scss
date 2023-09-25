@@ -311,7 +311,24 @@ nav a{
     }
 }
   
-
+.btnCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button{
+        background-color: #030303;
+        color: wheat;
+        border: solid white 0.5px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover{
+        background-color: #e0e0e0;
+        color: black;
+        border: solid black 0.5px;
+    }
+}
   
   
 
@@ -652,29 +669,40 @@ nav a{
         "carouselExampleDark full-view";
 
 
-    #carouselExampleDark{
+        #carouselExampleDark{
         padding: 0.4rem 0.2rem 0.4rem 0.2rem;
         width: 100%;
-    }
-
-    .full-view{
-        .model-shoes{
-            .model-sneaker{
-                font-size: 3.5rem;
-                margin: 1rem 0.5rem 1rem 0.5rem;
-            }
-            .genre{
-                font-size: 2rem;
-                margin: 1rem 0.5rem 1rem 0.5rem;
-            }
-            .price{ 
-                font-size: 1.7rem;
-                margin: 1rem 0.5rem 1rem 0.5rem;
-             }
         }
-    }
+
+        .full-view{
+            .model-shoes{
+            
+                .model-sneaker{
+                    font-size: 3.5rem;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                }
+                .genre{
+                    font-size: 2rem;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                }
+                .price{ 
+                    font-size: 1.7rem;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                }
+            }
+
+            .btnCarrito{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+        }
+    
 
     }
+
+    
 
     /* About US */
 

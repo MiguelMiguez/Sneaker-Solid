@@ -262,6 +262,25 @@ nav a {
   border: solid black 0.5px;
 }
 
+.btnCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnCarrito button {
+  background-color: #030303;
+  color: wheat;
+  border: solid white 0.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btnCarrito button:hover {
+  background-color: #e0e0e0;
+  color: black;
+  border: solid black 0.5px;
+}
+
 /* Accesorios */
 .port-accesorios {
   background-repeat: no-repeat;
@@ -526,6 +545,11 @@ nav a {
   .full-shoes .full-view .model-shoes .price {
     font-size: 1.7rem;
     margin: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .full-shoes .full-view .btnCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   /* About US */
   .div-about h1 {
