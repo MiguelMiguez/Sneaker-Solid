@@ -260,8 +260,9 @@ nav a{
             font-weight: 500;
             color: rgb(170, 49, 5);
             margin-bottom: 0.5rem;
+            padding-top: 0.2rem;
         }
-        button{
+        .agregar-carrito{
             background-color: #2e2a2a;
             border: solid rgb(170, 49, 5) 0.5px;
             border-radius: 4px;
@@ -269,6 +270,7 @@ nav a{
             transition: background-color 0.3s ease;
             padding: 0.2rem 0.5rem 0.2rem 0.5rem;
             color: white;
+            text-decoration: none;
         }
     }
 }
