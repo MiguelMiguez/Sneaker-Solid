@@ -8,10 +8,15 @@ const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 
 const carrito = document.querySelector('#carrito')
 
-/* document.addEventListener('DOMContentLoaded', ()=>{
-
+document.addEventListener('DOMContentLoaded', ()=>{
+    if(JSON.parse(localStorage.getItem('carrito'))==null){
+        articulosCarrito = []
+    }else{
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito'))
+    }
+    dibujarcarritoHTML();
 })
- */
+
 
 listaProductos.addEventListener('click', agregarProducto)
 
@@ -84,6 +89,7 @@ function dibujarcarritoHTML(){
         `;
         contenedorCarrito.appendChild(fila)
     })
+    sincronizarStorage();
 }
 
 function limpiarCarrito(){
@@ -96,8 +102,11 @@ function vaciarCarrito(){
     while(contenedorCarrito.firstChild){
         contenedorCarrito.removeChild(contenedorCarrito.firstChild)
     }
-    articulosCarrito=[]
+    articulosCarrito=[];
+    sincronizarStorage();
 }
 
 
-
+function sincronizarStorage(){
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito))
+}
