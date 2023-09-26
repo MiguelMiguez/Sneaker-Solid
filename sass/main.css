@@ -220,7 +220,16 @@ nav a {
 .catalogo .cat-sneakers .precio {
   font-weight: 500;
   color: rgb(170, 49, 5);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.catalogo .cat-sneakers button {
+  background-color: #2e2a2a;
+  border: solid rgb(170, 49, 5) 0.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  color: white;
 }
 
 /* shoes */
