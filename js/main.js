@@ -1,7 +1,12 @@
 let articulosCarrito = [];
 
 const listaProductos = document.querySelector('#lista-productos');
-console.log(listaProductos);
+
+const contenedorCarrito = document.querySelector('#lista-carrito tbody');
+
+const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+
+const carrito = document.querySelector('#carrito')
 
 /* document.addEventListener('DOMContentLoaded', ()=>{
 
@@ -10,13 +15,24 @@ console.log(listaProductos);
 
 listaProductos.addEventListener('click', agregarProducto)
 
+vaciarCarritoBtn.addEventListener('click', vaciarCarrito)
+
+carrito.addEventListener('click', eliminarProducto)
+
+function eliminarProducto(evt){
+    evt.preventDefault();
+    if(evt.target.classList.contains('borrar-producto')){
+        const producto = evt.target.parentElement.parentElement;
+        const productoId = producto.querySelector('a').getAttribute('element-id')
+        articulosCarrito = articulosCarrito.filter(producto => producto.id !== productoId)
+        dibujarcarritoHTML();
+    }
+}
+
 function agregarProducto(evt){
     evt.preventDefault (); 
-    console.log(evt.target.classList.contains('agregar-carrito'))
-
-
     if(evt.target.classList.contains('agregar-carrito')){
-        const producto = evt.target.parentElement.parentElement;
+        const producto = evt.target.parentElement;
         leerDatosProducto (producto)
     } 
 }
@@ -25,9 +41,63 @@ function agregarProducto(evt){
 
 function leerDatosProducto(item){ 
     const infoProducto = { 
+        imagen:(item.querySelector('img').src),
         modelo: item.querySelector('h2').textContent,  
         genre: item.querySelector('h3').textContent,  
-        precio: item.querySelector('h4').textContent 
-    } 
-    console.log(infoProducto) 
+        precio: item.querySelector('h4').textContent,
+        id: item.querySelector('a').getAttribute('element-id'),
+        cantidad: 1
+
+    }
+    
+   if(articulosCarrito.some(prod => prod.id === infoProducto.id)){
+        const productos = articulosCarrito.map (producto => {
+            if(producto.id === infoProducto.id){
+                let cantidad = parseInt(producto.cantidad);
+                cantidad += 1;
+                producto.cantidad=cantidad;
+                return producto
+            }else{
+                return producto;
+            }
+        })
+        articulosCarrito = productos.slice();
+   } else{
+        articulosCarrito.push(infoProducto)
+   }
+    
+    dibujarcarritoHTML()
 }
+
+function dibujarcarritoHTML(){
+    limpiarCarrito();
+    articulosCarrito.forEach(producto => {
+        const fila = document.createElement('tr')
+        fila.innerHTML = `
+        <td><img src="${producto.imagen}" width="100" /></td>
+        <td>${producto.modelo}</td>
+        <td>${producto.precio}</td>
+        <td>${producto.cantidad}</td>
+        <td>
+            <a href="#" class="borrar-producto" data-id="${producto.id}">❌</a>
+        </td>
+        `;
+        contenedorCarrito.appendChild(fila)
+    })
+}
+
+function limpiarCarrito(){
+    while(contenedorCarrito.firstChild){
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+    }
+}
+
+function vaciarCarrito(){
+    while(contenedorCarrito.firstChild){
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+    }
+    articulosCarrito=[]
+}
+
+
+

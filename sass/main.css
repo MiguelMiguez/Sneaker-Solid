@@ -49,6 +49,23 @@ table {
   border-spacing: 0;
 }
 
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
 /* Variables */
 /* nav */
 .navbar-brand {
@@ -62,12 +79,31 @@ table {
   transition: background-color 0.3s ease;
 }
 
+.navbar-nav .nav-item {
+  position: relative;
+}
 .navbar-nav .nav-item .nav-link {
   color: rgb(204, 192, 192);
+  cursor: pointer;
 }
 .navbar-nav .nav-link:hover {
   color: rgba(255, 0, 21, 0.8078431373);
   transition: background-color 0.3s ease;
+}
+.navbar-nav #carrito {
+  display: none;
+}
+.navbar-nav #submenu:hover #carrito {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+  color: #030303;
 }
 
 nav a {
