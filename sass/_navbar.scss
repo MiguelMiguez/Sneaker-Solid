@@ -1,0 +1,105 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem 2rem 1rem;
+    .lines{
+        display: none;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.new{
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+   .navBar{
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: end;
+
+        ul{
+            display: none;
+        }
+        
+        .lines{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            margin-right: 1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+
+                .linesGroup{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                        .line1{
+                            width: 30px;
+                            height: 2px;
+                            background-color: white;
+                        }
+                        .line2{
+                            width: 30px;
+                            height: 2px;
+                            background-color: white;
+                        }
+                        .line3{
+                            width: 30px;
+                            height: 2px;
+                            background-color: white;
+                        }
+
+                } 
+       
+
+        }
+
+        .lines:hover{
+            background-color: black;
+            transition: background-color 0.5s ease;
+        
+            .linesGroup:hover{
+
+                .line2{
+                    width: 20px;
+                    transition: width 0.5s ease;
+                }
+                .line3{
+                width: 10px;
+                    transition: width 0.5s ease;
+                }
+
+            }
+        
+
+        }
+
+    } 
+
+    .new{
+        ul{
+            text-align: end;
+            margin-right:2rem;
+            
+        }
+    }
+  
+}

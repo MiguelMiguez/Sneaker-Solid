@@ -67,6 +67,89 @@ td:last-child {
 }
 
 /* Variables */
+* {
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 2rem 1rem;
+}
+.navBar .lines {
+  display: none;
+}
+.navBar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.new {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+  }
+  .navBar ul {
+    display: none;
+  }
+  .navBar .lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  .navBar .lines .linesGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .navBar .lines .linesGroup .line1 {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+  }
+  .navBar .lines .linesGroup .line2 {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+  }
+  .navBar .lines .linesGroup .line3 {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+  }
+  .navBar .lines:hover {
+    background-color: black;
+    transition: background-color 0.5s ease;
+  }
+  .navBar .lines:hover .linesGroup:hover .line2 {
+    width: 20px;
+    transition: width 0.5s ease;
+  }
+  .navBar .lines:hover .linesGroup:hover .line3 {
+    width: 10px;
+    transition: width 0.5s ease;
+  }
+  .new ul {
+    text-align: end;
+    margin-right: 2rem;
+  }
+}
 /* nav */
 .navbar-brand {
   color: rgb(204, 192, 192);

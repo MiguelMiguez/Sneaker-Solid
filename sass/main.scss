@@ -68,8 +68,11 @@ $ftablet: 3rem;
 $fpc: 4rem;
 
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Montserrat:wght@100;300;400;500&display=swap');
+@import 'navbar.scss';
+
 
 /* nav */
+
 .navbar-brand{
     color: $fontcolor;
     font-size: $fmobile;
