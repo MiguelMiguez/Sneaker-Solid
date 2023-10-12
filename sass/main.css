@@ -87,6 +87,23 @@ td:last-child {
   display: flex;
   flex-direction: row;
   gap: 3rem;
+  cursor: pointer;
+}
+.navBar ul .cart {
+  cursor: pointer;
+}
+.navBar ul .cart #clkCarrito {
+  display: none;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  color: black;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+}
+.navBar ul .cart #clkCarrito p {
+  margin: 1rem;
 }
 
 .new {

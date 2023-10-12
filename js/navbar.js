@@ -12,10 +12,19 @@ function toggleNavbar() {
 }
 
 
+const touch1 = document.querySelector('#touch');
+const opencarrito = document.querySelector('#clkCarrito');
 
+touch1.addEventListener('click', despliegueCarrito);
 
-
-
+function despliegueCarrito() {
+    if (clkCarrito.style.display === 'flex' && clkCarrito.style.flexDirection === 'row') {
+      clkCarrito.style.display = 'none';
+    } else {
+      clkCarrito.style.display = 'flex';
+      clkCarrito.style.flexDirection = 'row';
+    }
+  }
 
 
 
