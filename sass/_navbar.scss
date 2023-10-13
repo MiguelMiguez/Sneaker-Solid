@@ -38,7 +38,14 @@
 }
 
 .new{
-    display: none;
+    position: fixed;
+    top: 5rem;
+    right: -350px;
+    bottom: 0;
+    background-color: white;
+    color: black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 @media (max-width: 800px) {
@@ -112,10 +119,11 @@
     } 
 
     .new{
+        
+
         ul{
             text-align: end;
-            margin-right:2rem;
-            
+            margin-right:2rem; 
         }
     }
   

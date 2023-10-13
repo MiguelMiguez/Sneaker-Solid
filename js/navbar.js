@@ -1,13 +1,18 @@
 const open = document.querySelector('#open');
 const nuevoContenedor = document.querySelector('#nuevoContenedor');
+let menuDerecha = true;
 
 open.addEventListener('click', toggleNavbar);
 
 function toggleNavbar() {
-    if (nuevoContenedor.style.display === 'block') {
-        nuevoContenedor.style.display = 'none';
-    } else {
-        nuevoContenedor.style.display = 'block'; 
+    if(menuDerecha){
+      nuevoContenedor.style.right = '0';
+      nuevoContenedor.style.transition ='1s';
+      menuDerecha = false;
+    } else{
+      nuevoContenedor.style.right = '-350px';
+      nuevoContenedor.style.transition ='1s';
+      menuDerecha = true;
     }
 }
 
