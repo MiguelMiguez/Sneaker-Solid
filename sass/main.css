@@ -95,8 +95,8 @@ td:last-child {
 .navBar ul .cart #clkCarrito {
   display: none;
   background-color: white;
-  width: 300px;
-  height: 300px;
+  width: 455px;
+  height: 455px;
   color: black;
   border-radius: 5px;
   position: absolute;
@@ -186,7 +186,7 @@ td:last-child {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: auto;
+    height: 500px;
     justify-content: space-around;
     align-items: center;
   }
