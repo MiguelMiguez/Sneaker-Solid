@@ -13,50 +13,63 @@
         <title>SneakerSolid</title>
     </head>
 <body>
-    <header>
-        <nav class="navbar bg-dark navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../index.html">SS</a>
-              <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="../pages/sneakers.html">Sneakers</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="../pages/accesorios.html">Accesorios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="../pages/contact.html">Contact</a>
-                  </li>
-                  <li id="submenu" class="nav-item">
-                    <img  id="img-carrito" class="nav-link active" src="../img/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                    <div id="carrito">
-                      <table id="lista-carrito" class="u-full-width">
-                          <thead>
-                              <tr>
-                                  <th>Imagen</th>
-                                  <th>Nombre</th>
-                                  <th>Precio</th>
-                                  <th>Cantidad</th>
-                                  <th></th>
-                              </tr>
-                          </thead>
-                          <tbody></tbody>
-                       </table>
-                      <a href="#" id="vaciar-carrito" class="boton u-full-width">Vaciar Carrito</a>
+
+    <header id="contenedorPrincipal">
+        <nav class="navBar">
+            <img class="brand" src="" alt="">
+            <ul>
+                <li>
+                    <a href="">contacto</a>
+                </li>
+                <li>
+                    <a href="">sneakers</a>
+                </li>
+                <li>
+                    <a href="">accesorios</a>
+                </li>
+                <li class="cart">
+                    <img id="touch" src="../img/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <div id="clkCarrito" >
+                        <p>Producto</p>
+                        <p>Cantidad</p>
+                        <p>Precio</p>
+
                     </div>
-                  </li>
-                </ul>
-              </div>
+                </li>
+                
+            </ul>
+            <div id="open" class="lines">
+                <div class="linesGroup">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>    
             </div>
-          </nav>
+        </nav>
     </header>
+    <div id="nuevoContenedor" class="new">
+        <ul>
+            <li>
+                <a href="">contacto</a>
+            </li>
+            <li>
+                <a href="">sneakers</a>
+            </li>
+            <li>
+                <a href="">accesorios</a>
+            </li>
+            <li class="esto">
+                <img id="touch"src="../img/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                <div id="clkCarrito2">
+                    <p>Producto</p>
+                    <p>Cantidad</p>
+                    <p>Precio</p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+    <script src="../js/navbar.js" defer></script>
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
