@@ -147,3 +147,5 @@ function despliegueCarrito() {
       localStorage.setItem('carrito', JSON.stringify(articulosCarrito))
   }
   
+/* -------------------------------------------- */
+
