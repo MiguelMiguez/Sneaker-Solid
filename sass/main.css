@@ -93,6 +93,9 @@ td:last-child {
 .navbar-nav .cart {
   cursor: pointer;
 }
+.navbar-nav .cart #touch {
+  margin: 0.5rem;
+}
 .navbar-nav .cart #clkCarrito {
   display: none;
   background-color: white;
@@ -224,22 +227,43 @@ nav a {
   border-radius: 5px;
   padding: 0.1rem 0.1rem;
   box-shadow: 2px 2px 4px 0px rgba(66, 66, 66, 0.767);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 .global-sneakers .sneakers-dest img {
   border-radius: 5px;
   width: 200px;
   height: 200px;
+  margin: 0.3rem;
 }
-.global-sneakers .sneakers-dest p {
+.global-sneakers .sneakers-dest .modelo {
   text-align: start;
-  padding-left: 0.5rem;
-  padding-bottom: 0.2rem;
   font-weight: 600;
+  margin: 0.2rem;
 }
-.global-sneakers .sneakers-dest .precio {
-  padding-bottom: 0.15rem;
+.global-sneakers .sneakers-dest .genero {
+  margin: 0.2rem;
   font-weight: 500;
   color: rgb(170, 49, 5);
+}
+.global-sneakers .sneakers-dest .precio {
+  margin: 0.3rem;
+  font-weight: 500;
+}
+.global-sneakers .sneakers-dest .agregar-carrito {
+  background-color: #2e2a2a;
+  border: solid rgb(170, 49, 5) 0.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  color: white;
+  text-decoration: none;
+  margin: 0.2rem;
+  text-align: center;
 }
 
 /* Sneakers */
@@ -552,11 +576,11 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .global-sneakers .sneakers-dest {
-    width: 300px;
+    width: auto;
     height: auto;
   }
   .global-sneakers .sneakers-dest img {
-    width: 300px;
+    width: 250px;
     height: auto;
   }
   .global-sneakers .sneakers-dest p {
@@ -691,7 +715,7 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .global-sneakers .sneakers-dest {
-    width: 300px;
+    width: auto;
     height: auto;
   }
   .global-sneakers .sneakers-dest img {

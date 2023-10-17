@@ -136,3 +136,25 @@ compra.addEventListener('click', cartelSwap);
 function cartelSwap (){
     Swal.fire('Compra Realizada')
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("ordenarBoton").addEventListener("click", ordenarPorPrecio);
+});
+
+function ordenarPorPrecio() {
+    var elementos = document.querySelectorAll(".cat-sneakers");
+    var arregloElementos = Array.from(elementos);
+
+    arregloElementos.sort(function(a, b) {
+        var precioA = parseInt(a.querySelector(".precio").textContent);
+        var precioB = parseInt(b.querySelector(".precio").textContent);
+        return precioA - precioB;
+    });
+
+    var contenedor = document.body; // Cambia esto al contenedor específico donde se encuentran tus elementos
+
+    arregloElementos.forEach(function(elemento) {
+        contenedor.appendChild(elemento);
+    });
+}
