@@ -90,20 +90,45 @@ td:last-child {
   color: rgba(255, 0, 21, 0.8078431373);
   transition: background-color 0.3s ease;
 }
-.navbar-nav #carrito {
-  display: none;
+.navbar-nav .cart {
+  cursor: pointer;
 }
-.navbar-nav #submenu:hover #carrito {
-  display: block;
+.navbar-nav .cart #clkCarrito {
+  display: none;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  color: black;
+  border-radius: 5px;
   position: absolute;
+  z-index: 1;
   right: 0;
   top: 100%;
-  z-index: 1;
-  background-color: white;
-  padding: 20px;
-  min-height: 400px;
-  min-width: 300px;
-  color: #030303;
+  justify-content: center;
+  overflow: auto;
+}
+.navbar-nav .cart #clkCarrito #carrito {
+  text-align: center;
+  margin: 1rem;
+}
+.navbar-nav .cart #clkCarrito #carrito table {
+  margin: 1rem;
+}
+.navbar-nav .cart #clkCarrito #carrito a {
+  text-decoration: none;
+  margin: 1rem;
+}
+.navbar-nav .cart #clkCarrito #carrito #comprar {
+  background-color: green;
+  border-radius: 2px;
+  color: white;
+  padding: 0.2rem;
+}
+.navbar-nav .cart #clkCarrito #carrito #vaciar-carrito {
+  background-color: rgb(94, 7, 7);
+  border-radius: 2px;
+  color: white;
+  padding: 0.2rem;
 }
 
 nav a {
@@ -225,6 +250,8 @@ nav a {
 }
 
 .catalogo {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
