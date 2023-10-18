@@ -155,28 +155,7 @@ const mostrarProductos = (data) => {
     })
 }
 
-mostrarProductos(producto);
-
-function ordenarProductosPorPrecioMenor() {
-    producto.sort((a, b) => parseFloat(a.precio) - parseFloat(b.precio));
-    limpiarProductos();
-    mostrarProductos(producto);
-}
-
-function ordenarProductosPorPrecioMayor() {
-    producto.sort((a, b) => parseFloat(b.precio) - parseFloat(a.precio));
-    limpiarProductos();
-    mostrarProductos(producto);
-}
-
-function limpiarProductos() {
-    while (listaProductos.firstChild) {
-        listaProductos.removeChild(listaProductos.firstChild);
-    }
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     const orderBtnMenor = document.getElementById('orderBtnMenor');
     const orderBtnMayor = document.getElementById('orderBtnMayor');
 
@@ -184,8 +163,68 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         ordenarProductosPorPrecioMenor();
     });
+
     orderBtnMayor.addEventListener('click', (e) => {
         e.preventDefault();
         ordenarProductosPorPrecioMayor();
     });
-}); 
+
+    
+    fetch('productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la información de productos');
+            }
+            return response.json();
+        })
+        .then(data => {
+            mostrarProductos(data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+ */
+
+let data; // Declarar data en un ámbito más amplio
+
+document.addEventListener('DOMContentLoaded', () => {
+    const listaProductos = document.getElementById('lista-productos');
+
+    // Usar fetch para cargar los productos desde productos.json
+    fetch('productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la información de productos');
+            }
+            return response.json();
+        })
+        .then(responseData => {
+            data = responseData; // Asignar los datos a la variable data
+            mostrarProductos(data, listaProductos); // Mostrar los productos en el elemento listaProductos
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+
+// Resto de tu código aquí
+
+function ordenarProductosPorPrecioMenor() {
+    if (data) {
+        const productosOrdenados = [...data];
+        productosOrdenados.sort((a, b) => parseFloat(a.precio) - parseFloat(b.precio));
+        limpiarProductos();
+        mostrarProductos(productosOrdenados);
+    }
+}
+
+function ordenarProductosPorPrecioMayor() {
+    if (data) {
+        const productosOrdenados = [...data];
+        productosOrdenados.sort((a, b) => parseFloat(b.precio) - parseFloat(a.precio));
+        limpiarProductos();
+        mostrarProductos(productosOrdenados);
+    }
+}
+
