@@ -147,7 +147,7 @@ const mostrarProductos = (data) => {
                                         <img class="img-snakers-cat" src="${producto.img}" alt="${producto.modelo}">
                                         <h2 class="modelo">${producto.modelo}</h2>
                                         <h3 class="genero">${producto.genre}</h3>
-                                        <h4 class="precio" >${producto.precio}</h4>
+                                        <h4 class="precio" >$${producto.precio}</h4>
                                         <a href="#" class="agregar-carrito"  element-id="${producto.id}">AGREGAR AL CARRITO</a>
                                     </div>
                                  `;
