@@ -138,23 +138,54 @@ function cartelSwap (){
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("ordenarBoton").addEventListener("click", ordenarPorPrecio);
-});
-
-function ordenarPorPrecio() {
-    var elementos = document.querySelectorAll(".cat-sneakers");
-    var arregloElementos = Array.from(elementos);
-
-    arregloElementos.sort(function(a, b) {
-        var precioA = parseInt(a.querySelector(".precio").textContent);
-        var precioB = parseInt(b.querySelector(".precio").textContent);
-        return precioA - precioB;
-    });
-
-    var contenedor = document.body; // Cambia esto al contenedor específico donde se encuentran tus elementos
-
-    arregloElementos.forEach(function(elemento) {
-        contenedor.appendChild(elemento);
-    });
+const mostrarProductos = (data) => {
+    data.forEach (producto =>{
+        const cardProducto = document.createElement('article');
+        cardProducto.setAttribute('id','cat-sneakers');
+        cardProducto.innerHTML = `
+                                    <div class="cat-sneakers">
+                                        <img class="img-snakers-cat" src="${producto.img}" alt="${producto.modelo}">
+                                        <h2 class="modelo">${producto.modelo}</h2>
+                                        <h3 class="genero">${producto.genre}</h3>
+                                        <h4 class="precio" >${producto.precio}</h4>
+                                        <a href="#" class="agregar-carrito"  element-id="${producto.id}">AGREGAR AL CARRITO</a>
+                                    </div>
+                                 `;
+                                 listaProductos.appendChild(cardProducto);
+    })
 }
+
+mostrarProductos(producto);
+
+function ordenarProductosPorPrecioMenor() {
+    producto.sort((a, b) => parseFloat(a.precio) - parseFloat(b.precio));
+    limpiarProductos();
+    mostrarProductos(producto);
+}
+
+function ordenarProductosPorPrecioMayor() {
+    producto.sort((a, b) => parseFloat(b.precio) - parseFloat(a.precio));
+    limpiarProductos();
+    mostrarProductos(producto);
+}
+
+function limpiarProductos() {
+    while (listaProductos.firstChild) {
+        listaProductos.removeChild(listaProductos.firstChild);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const orderBtnMenor = document.getElementById('orderBtnMenor');
+    const orderBtnMayor = document.getElementById('orderBtnMayor');
+
+    orderBtnMenor.addEventListener('click', (e) => {
+        e.preventDefault();
+        ordenarProductosPorPrecioMenor();
+    });
+    orderBtnMayor.addEventListener('click', (e) => {
+        e.preventDefault();
+        ordenarProductosPorPrecioMayor();
+    });
+}); 

@@ -267,10 +267,33 @@ nav a {
 }
 
 /* Sneakers */
-.btn-group {
-  margin: 1rem 1rem 1rem 1rem;
+.btnOrden {
   display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
+}
+.btnOrden #orderBtnMenor {
+  background-color: #2e2a2a;
+  border: solid rgb(170, 49, 5) 0.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+.btnOrden #orderBtnMayor {
+  background-color: #2e2a2a;
+  border: solid rgb(170, 49, 5) 0.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  color: white;
+  text-decoration: none;
 }
 
 .catalogo {
