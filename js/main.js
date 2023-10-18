@@ -155,37 +155,55 @@ const mostrarProductos = (data) => {
     })
 }
 
-mostrarProductos(producto);
 
-function ordenarProductosPorPrecioMenor() {
-    producto.sort((a, b) => parseFloat(a.precio) - parseFloat(b.precio));
-    limpiarProductos();
-    mostrarProductos(producto);
-}
-
-function ordenarProductosPorPrecioMayor() {
-    producto.sort((a, b) => parseFloat(b.precio) - parseFloat(a.precio));
-    limpiarProductos();
-    mostrarProductos(producto);
-}
-
-function limpiarProductos() {
-    while (listaProductos.firstChild) {
-        listaProductos.removeChild(listaProductos.firstChild);
-    }
-}
-
+const orderBtnMenor = document.querySelector('#orderBtnMenor');
+const orderBtnMayor = document.querySelector('#orderBtnMayor');
 
 document.addEventListener('DOMContentLoaded', () => {
-    const orderBtnMenor = document.getElementById('orderBtnMenor');
-    const orderBtnMayor = document.getElementById('orderBtnMayor');
+    fetch('productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar la información de productos');
+            }
+            return response.json();
+        })
+        .then(data => {
+            mostrarProductos(data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
 
-    orderBtnMenor.addEventListener('click', (e) => {
-        e.preventDefault();
-        ordenarProductosPorPrecioMenor();
+orderBtnMenor.addEventListener('click', ordenarProductosMenor);
+orderBtnMayor.addEventListener('click', ordenarProductosMayor);
+
+
+function ordenarProductosMenor() {
+    const productos = Array.from(listaProductos.children);
+    productos.sort((a, b) => {
+        const precioA = parseFloat(a.querySelector('.precio').textContent);
+        const precioB = parseFloat(b.querySelector('.precio').textContent);
+        return precioA - precioB;
     });
-    orderBtnMayor.addEventListener('click', (e) => {
-        e.preventDefault();
-        ordenarProductosPorPrecioMayor();
+    
+    listaProductos.innerHTML = '';
+    productos.forEach(producto => {
+        listaProductos.appendChild(producto);
     });
-}); 
+}
+
+function ordenarProductosMayor() {
+    
+    const productos = Array.from(listaProductos.children);
+    productos.sort((a, b) => {
+        const precioA = parseFloat(a.querySelector('.precio').textContent);
+        const precioB = parseFloat(b.querySelector('.precio').textContent);
+        return precioB - precioA;
+    });
+
+    listaProductos.innerHTML = '';
+    productos.forEach(producto => {
+        listaProductos.appendChild(producto);
+    });
+}
