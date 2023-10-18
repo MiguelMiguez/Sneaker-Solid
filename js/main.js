@@ -207,3 +207,5 @@ function ordenarProductosMayor() {
         listaProductos.appendChild(producto);
     });
 }
+
+/* --- */
