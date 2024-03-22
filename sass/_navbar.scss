@@ -1,0 +1,80 @@
+.navbar-brand{
+    color: $fontcolor;
+    font-size: $fmobile;
+    font-weight: 600;
+}
+
+.navbar-brand:hover{
+    color: #ff0015ce;
+    transition: background-color 0.3s ease;
+}
+
+
+.navbar-nav{
+
+    .nav-item{  
+        position: relative;
+        .nav-link{
+        color: $fontcolor;
+        cursor: pointer;
+        }
+    }
+    .nav-link:hover{
+        color: #ff0015ce;
+        transition: background-color 0.3s ease;
+       
+    }
+    
+    .cart{
+        cursor: pointer;
+
+        #touch{
+           margin: 0.5rem;
+        }
+
+        #clkCarrito{
+            display: none;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            color: black;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 100%;
+            justify-content: center;
+            overflow: auto;
+            #carrito{
+                text-align: center;
+                margin: 1rem;
+
+                table{
+                    margin: 1rem;
+                }
+
+               a{
+                text-decoration: none;
+                margin: 1rem;
+               }
+               #comprar{
+                background-color: green;
+                border-radius: 2px;
+                color: white;
+                padding: 0.2rem;
+               }
+               #vaciar-carrito{
+                background-color: rgb(94, 7, 7);
+                border-radius: 2px;
+                color: white;
+                padding: 0.2rem;
+               }
+            }
+    
+        }
+    }
+}
+
+nav a{
+    color: $fontcolor; 
+}

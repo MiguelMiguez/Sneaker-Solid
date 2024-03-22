@@ -1,0 +1,277 @@
+
+.btnOrden{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    #orderBtnMenor{
+        background-color: #2e2a2a;
+        border: solid rgb(255, 75, 10) 0.5px;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        width: 200px;
+        text-transform: uppercase;
+        transition: 0.5s;
+        font-weight: 500;
+    }
+    #orderBtnMayor{
+        background-color: #2e2a2a;
+        border: solid rgb(255, 75, 10) 0.5px;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        width: 200px;
+        text-transform: uppercase;
+        transition: 0.5s;
+        font-weight: 500;
+    }
+
+    #orderBtnMenor:hover{
+        background-color: #a89696;
+        color: black;
+        border: solid rgb(172, 47, 47) 0.5px;
+    }
+    #orderBtnMayor:hover{
+        background-color: #a89696;
+        color: black;
+        border: solid rgb(172, 47, 47) 0.5px;
+    }
+
+}
+
+.catalogo{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap:3rem;
+    margin-bottom: 3rem;
+    
+    
+    .sneakers-dest{
+        background-color: $colorcat ;
+        border-radius: 20px;
+        padding:0.1rem 0.1rem ;
+        box-shadow: 0px 15px 20px rgba(8, 8, 8, 0.5);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+        transition: opacity 1s ease, transform 1.5s ease;
+        
+        .img-snakers-cat{
+            border-radius: 5px;
+            width: 200px;
+            height: 200px;
+            box-shadow: 0px 5px 10px rgba(8, 8, 8, 0.5);
+        }
+
+        .modelo{
+            text-align: start;
+            font-weight: 600;
+            text-shadow:  0 0px  10px rgba(0, 0, 0, 0.993); 
+        }
+
+        .genero{
+            font-weight: 500;
+            color: rgb(255, 75, 10);
+        }
+
+        .precio{
+            font-weight: 500;
+        }
+
+        .ContainerAddToCart{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .agregar-carrito{
+                background-color: #2e2a2a;
+                border: solid rgb(255, 75, 10) 0.5px;
+                border-radius: 10px;
+                cursor: pointer;
+                padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                width: 200px;
+                text-transform: uppercase;
+                transition: 0.5s;
+                font-weight: 500;
+            }
+
+            .agregar-carrito:hover{
+                background-color: #a89696;
+                color: black;
+                border: solid rgb(172, 47, 47) 0.5px;
+            }
+
+        }
+        
+    }
+
+    .sneakers-dest:hover{
+        transform: translateY(-20px);
+       
+        transition: transform 0.5s ease; 
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 993px) and (max-width: 1200px){
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .cat-sneakers{
+
+            background-color: $bodycolor;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            
+            
+            .img-snakers-cat{
+                width: 300px;
+                height: 300px;
+                border-radius: 5px;
+                border: solid $colorcat 2px;
+            }
+    
+            p{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 600;
+            }
+    
+            .genero{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 200;
+                color: white;
+            }
+    
+            .precio{
+                font-weight: 500;
+                color: rgb(170, 49, 5);
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    }
+
+    
+
+    .full-shoes{
+        display: grid;
+        grid-template-areas: 
+        "carouselExampleDark full-view";
+
+
+        #carouselExampleDark{
+        padding: 0.4rem 0.2rem 0.4rem 0.2rem;
+        width: 100%;
+        }
+
+        .full-view{
+            .model-shoes{
+            
+                .model-sneaker{
+                    font-size: 3.5rem;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                }
+                .genre{
+                    font-size: 2rem;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                }
+                .price{ 
+                    font-size: 1.7rem;
+                    margin: 1rem 0.5rem 1rem 0.5rem;
+                }
+            }
+
+            .btnCarrito{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+        }
+    
+
+    }
+}
+
+
+@media (min-width: 1201px) {
+
+    .port-accesorios{
+        background-size: cover;
+    }
+
+    .catalogo{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .cat-sneakers{
+
+            background-color: $bodycolor;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            
+            
+            .img-snakers-cat{
+                width: 300px;
+                height: 300px;
+                border-radius: 5px;
+                border: solid $colorcat 2px;
+            }
+    
+            p{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 600;
+            }
+    
+            .genero{
+                text-align: start;
+                padding-top: 0.5rem;
+                font-weight: 200;
+                color: white;
+            }
+    
+            .precio{
+                font-weight: 500;
+                color: rgb(170, 49, 5);
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    }
+}
