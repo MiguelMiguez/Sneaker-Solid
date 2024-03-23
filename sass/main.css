@@ -43,28 +43,6 @@ q:before, q:after {
   content: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1;
-}
-
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-
 * body {
   font-family: "Montserrat", sans-serif;
   background-color: rgb(30, 28, 32);
@@ -102,35 +80,49 @@ td:last-child {
 .navbar-nav .cart #clkCarrito {
   display: none;
   background-color: white;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   color: black;
-  border-radius: 5px;
+  border-radius: 15px;
   position: absolute;
   z-index: 1;
   right: 0;
   top: 100%;
   justify-content: center;
   overflow: auto;
+  margin-right: 1rem;
+  align-items: start;
 }
 .navbar-nav .cart #clkCarrito #carrito {
-  text-align: center;
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0.5rem;
 }
-.navbar-nav .cart #clkCarrito #carrito table {
-  margin: 1rem;
+.navbar-nav .cart #clkCarrito #carrito #dibujar-carrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
 }
 .navbar-nav .cart #clkCarrito #carrito a {
   text-decoration: none;
   margin: 1rem;
 }
-.navbar-nav .cart #clkCarrito #carrito #comprar {
+.navbar-nav .cart #clkCarrito #carrito #CartButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+}
+.navbar-nav .cart #clkCarrito #carrito #CartButtons #comprar {
   background-color: green;
   border-radius: 2px;
   color: white;
   padding: 0.2rem;
 }
-.navbar-nav .cart #clkCarrito #carrito #vaciar-carrito {
+.navbar-nav .cart #clkCarrito #carrito #CartButtons #vaciar-carrito {
   background-color: rgb(94, 7, 7);
   border-radius: 2px;
   color: white;
@@ -566,33 +558,23 @@ nav a {
   }
   .catalogo {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 3rem 2rem 3rem 2rem;
+    gap: 2rem;
   }
-  .catalogo .cat-sneakers {
-    background-color: rgb(30, 28, 32);
-    border-radius: 5px;
-    margin-bottom: 1rem;
+  .catalogo .sneakers-dest {
+    width: auto;
+    height: auto;
   }
-  .catalogo .cat-sneakers .img-snakers-cat {
-    width: 300px;
-    height: 300px;
-    border-radius: 5px;
-    border: solid rgb(42, 38, 46) 2px;
+  .catalogo .sneakers-dest img {
+    width: 350px;
+    height: auto;
   }
-  .catalogo .cat-sneakers p {
-    text-align: start;
-    padding-top: 0.5rem;
-    font-weight: 600;
+  .catalogo .sneakers-dest p {
+    font-size: large;
   }
-  .catalogo .cat-sneakers .genero {
-    text-align: start;
-    padding-top: 0.5rem;
-    font-weight: 200;
-    color: white;
-  }
-  .catalogo .cat-sneakers .precio {
-    font-weight: 500;
-    color: rgb(170, 49, 5);
-    margin-bottom: 1.5rem;
+  .catalogo .sneakers-dest .ContainerAddToCart .agregar-carrito {
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    width: 200px;
   }
 }
 .div-about {
