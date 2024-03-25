@@ -55,7 +55,7 @@
 
                 #dibujar-carrito{
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: start;
                     gap: 1rem;
@@ -89,6 +89,21 @@
             }
     
         }
+    }
+}
+
+.CartElements{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    img{
+        width: 70px;
+        height: auto;
+    }
+    .CartText{
+        width: 60px;
     }
 }
 

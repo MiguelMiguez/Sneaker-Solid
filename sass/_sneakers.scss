@@ -1,4 +1,21 @@
 
+.land-sneakers{
+    background-image: url(../img/slide1.webp);
+    min-height: 40vh;
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 75, 10);
+    h2{
+        font-size: 3rem;
+        text-shadow:  0 0px  10px rgba(0, 0, 0, 0.993); 
+    }
+}
+
 .btnOrden{
     display: flex;
     flex-direction: row;

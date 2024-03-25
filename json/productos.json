@@ -4,139 +4,142 @@
         "img": "../img/zapatillas-sneakers1.webp",
         "modelo": "Air Force 1",
         "genre": "Masculino",
-        "precio": "100000"
+        "precio": "1000"
     },
     {
         "id": 2,
         "img": "../img/zapatillas-sneakers2.webp",
         "modelo": "Air Force 1",
         "genre": "Femenino",
-        "precio": "120000"
+        "precio": "1200"
     },
     {
         "id": 3,
         "img": "../img/zapatillas-sneakers3.webp",
         "modelo": "Air Force 1",
         "genre": "Niño",
-        "precio": "110000"
+        "precio": "1100"
     },
     {
         "id": 4,
         "img": "../img/zapatillas-sneakers4.webp",
         "modelo": "Air Force 1",
         "genre": "Masculino",
-        "precio": "160000"
+        "precio": "1600"
     },
     {
         "id": 5,
         "img": "../img/zapatillas-sneakers5.webp",
         "modelo": "Air Force 1",
         "genre": "Femenino",
-        "precio": "130000"
+        "precio": "1300",
+        "dest": 3
     },
     {
         "id": 6,
         "img": "../img/zapatillas-sneakers6.webp",
         "modelo": "Air Force 1",
         "genre": "Niño",
-        "precio": "140000"
+        "precio": "1400"
     },
     {
         "id": 7,
         "img": "../img/zapatillas-sneakers7.webp",
         "modelo": "Air Force 1",
         "genre": "Masculino",
-        "precio": "170000"
+        "precio": "1700",
+        "dest": 1
     },
     {
         "id": 8,
         "img": "../img/zapatillas-sneakers8.webp",
         "modelo": "Air Force 1",
         "genre": "Femenino",
-        "precio": "180000"
+        "precio": "1800"
     },
     {
         "id": 9,
         "img": "../img/zapatillas-sneakers9.webp",
         "modelo": "Air Force 1",
         "genre": "Niño",
-        "precio": "190000"
+        "precio": "1900",
+        "dest": 2
     },
     {
         "id": 10,
         "img": "../img/zapatillas-sneakers10.webp",
         "modelo": "Air Force 1",
         "genre": "Masculino",
-        "precio": "200000"
+        "precio": "2000"
     },
     {
         "id": 11,
         "img": "../img/zapatillas-sneakers7.webp",
         "modelo": "Air Force 1",
         "genre": "Femenino",
-        "precio": "150000"
+        "precio": "1500"
     },
     {
         "id": 12,
         "img": "../img/zapatillas-sneakers8.webp",
         "modelo": "Air Force 1",
         "genre": "Niño",
-        "precio": "160000"
+        "precio": "1600"
     },
     {
         "id": 13,
         "img": "../img/zapatillas-sneakers10.webp",
         "modelo": "Air Force 1",
         "genre": "Masculino",
-        "precio": "140000"
+        "precio": "1400"
     },
     {
         "id": 14,
         "img": "../img/zapatillas-sneakers4.webp",
         "modelo": "Air Force 1",
         "genre": "Femenino",
-        "precio": "170000"
+        "precio": "1700"
     },
     {
         "id": 15,
         "img": "../img/zapatillas-sneakers5.webp",
         "modelo": "Air Force 1",
         "genre": "Niño",
-        "precio": "120000"
+        "precio": "1200"
     },
     {
         "id": 16,
         "img": "../img/zapatillas-sneakers7.webp",
         "modelo": "Air Force 1",
         "genre": "Masculino",
-        "precio": "180000"
+        "precio": "1800"
     },
     {
         "id": 17,
         "img": "../img/zapatillas-sneakers3.webp",
         "modelo": "Air Force 1",
         "genre": "Femenino",
-        "precio": "190000"
+        "precio": "1900"
     },
     {
         "id": 18,
         "img": "../img/zapatillas-sneakers1.webp",
         "modelo": "Air Force 1",
         "genre": "Niño",
-        "precio": "160000"
+        "precio": "1600"
     },
     {
         "id": 19,
         "img": "../img/zapatillas-sneakers2.webp",
         "modelo": "Air Force 1",
         "genre": "Masculino",
-        "precio": "150000"
+        "precio": "1500"
     },
     {
         "id": 20,
         "img": "../img/zapatillas-sneakers8.webp",
         "modelo": "Air Force 1",
         "genre": "Femenino",
-        "precio": "130000"
+        "precio": "1300"
     }
 ]

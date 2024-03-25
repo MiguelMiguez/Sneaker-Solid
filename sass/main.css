@@ -101,7 +101,7 @@ q:before, q:after {
 }
 .navbar-nav .cart #clkCarrito #carrito #dibujar-carrito {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: start;
   gap: 1rem;
@@ -127,6 +127,21 @@ q:before, q:after {
   border-radius: 2px;
   color: white;
   padding: 0.2rem;
+}
+
+.CartElements {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.CartElements img {
+  width: 70px;
+  height: auto;
+}
+.CartElements .CartText {
+  width: 60px;
 }
 
 nav a {
@@ -184,6 +199,7 @@ nav a {
   padding: 10rem 0rem 10rem 0rem;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 .port-sneakers h1 {
   text-align: start;
@@ -321,7 +337,7 @@ nav a {
     background-size: cover;
   }
   .global-sneakers {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .global-sneakers .sneakers-dest {
     width: auto;
@@ -348,7 +364,7 @@ nav a {
   }
   .global-sneakers {
     margin: 3rem 2rem 3rem 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
   .global-sneakers .sneakers-dest {
@@ -370,6 +386,23 @@ nav a {
     display: none;
   }
 }
+.land-sneakers {
+  background-image: url(../img/slide1.webp);
+  min-height: 40vh;
+  background-position: start;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 75, 10);
+}
+.land-sneakers h2 {
+  font-size: 3rem;
+  text-shadow: 0 0px 10px rgba(0, 0, 0, 0.993);
+}
+
 .btnOrden {
   display: flex;
   flex-direction: row;
