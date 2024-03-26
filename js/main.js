@@ -1,6 +1,7 @@
 let articulosCarrito = [];
 
 const listaProductos = document.querySelector('#lista-productos');
+const listaProductosDest = document.querySelector('#lista-productos-dest');
 const contenedorCarrito = document.querySelector('#dibujar-carrito');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const carrito = document.querySelector('#carrito');
