@@ -15,6 +15,7 @@ orderBtnMenor.addEventListener('click', ordenarProductosMenor);
 orderBtnMayor.addEventListener('click', ordenarProductosMayor);
 
 
+
 document.addEventListener('DOMContentLoaded', ()=>{
     if(JSON.parse(localStorage.getItem('carrito'))==null){
         articulosCarrito = []
@@ -68,9 +69,9 @@ function leerDatosProducto(item){
             }
         })
         articulosCarrito = productos.slice();
-   } else{
+    } else{
         articulosCarrito.push(infoProducto)
-   }
+    }
     
     dibujarcarritoHTML()
 }
